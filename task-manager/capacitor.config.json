@@ -1,0 +1,5 @@
+{
+  "appId": "com.jfranco.taskmanager",
+  "appName": "Task Manager",
+  "webDir": "dist"
+}
