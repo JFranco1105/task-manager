@@ -1,0 +1,658 @@
+.pd-container {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.pd-top-nav {
+    margin-bottom: 8px;
+}
+
+.pd-breadcrumb {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.pd-breadcrumb:hover {
+    color: var(--primary);
+}
+
+.pd-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.pd-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.pd-badge-status {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.badge-dueno {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.badge-admin {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.badge-usuario {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.pd-sub-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 6px 0 4px 0;
+}
+
+.pd-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pd-btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pd-btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.pd-btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Pestañas */
+.pd-tabs {
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.pd-tab-item {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+}
+
+.pd-tab-item.active {
+    color: var(--primary);
+}
+
+.pd-tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Kanban Columnas */
+.pd-kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.kanban-column {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 400px;
+}
+
+.kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.kanban-header h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.kanban-count {
+    background: var(--bg-main);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.kanban-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Tarjetas grandes, espaciosas y con borde completo de color seleccionado */
+.kanban-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.kanban-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.kanban-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.kanban-card-top h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.kanban-titulo-tachado {
+    text-decoration: line-through;
+}
+
+.kanban-asignados-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.kanban-asignados-strong {
+    color: var(--text-main);
+}
+
+.kanban-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 8px 0 14px 0;
+}
+
+.kanban-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+}
+
+.kanban-actions-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.kanban-edit-btn {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.kanban-edit-btn:hover {
+    background: #e2e8f0;
+}
+
+.kanban-move-btn {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.kanban-move-btn:hover {
+    background: #eef2ff;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Calendario */
+.calendar-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.calendar-custom-container {
+    min-height: 750px;
+}
+
+.calendar-header-box {
+    margin-bottom: 20px;
+}
+
+.calendar-header-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-custom-grid {
+    grid-template-rows: repeat(5, minmax(130px, 1fr));
+    gap: 8px;
+    background: transparent;
+    border: none;
+}
+
+.calendar-day-header {
+    background: var(--bg-main);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.calendar-day-header-custom {
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.calendar-cell {
+    background: white;
+    min-height: 100px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.calendar-cell-valid {
+    min-height: 130px;
+    padding: 8px;
+    background: #fff;
+}
+
+.calendar-cell-empty {
+    background: #f8fafc;
+}
+
+.calendar-date-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.calendar-tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.calendar-tasks-list-custom {
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.calendar-task-item {
+    color: #1e293b;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-left: 4px solid #334155;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-task-title {
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.calendar-task-asignados {
+    font-size: 0.7rem;
+    opacity: 0.85;
+    margin-top: 2px;
+}
+
+/* SECCIÓN EQUIPO */
+.pd-equipo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pd-section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.pd-section-card-nobottom {
+    margin-bottom: 0;
+}
+
+.pd-mensaje-inv {
+    margin-bottom: 16px;
+}
+
+.pd-form-invitar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.pd-input-flex {
+    flex: 1;
+}
+
+.pd-btn-nowrap {
+    white-space: nowrap;
+}
+
+.pd-equipo-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pd-btn-salir {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.pd-btn-eliminar-grupo {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.pd-miembros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.pd-miembro-card {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pd-miembro-info-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pd-miembro-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pd-miembro-avatar-fallback {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #6366f1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.pd-miembro-text-box {
+    overflow: hidden;
+}
+
+.pd-miembro-nombre {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1e293b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+}
+
+.pd-miembro-email {
+    font-size: 0.8rem;
+    color: #64748b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+}
+
+.pd-miembro-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.pd-miembro-rol-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.pd-select-rol {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+}
+
+.pd-btn-expulsar {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.pd-input {
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #ffffff;
+    color: var(--text-main);
+    width: 100%;
+}
+
+.pd-input.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.pd-color-picker-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pd-color-input-real {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.pd-color-hex-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}

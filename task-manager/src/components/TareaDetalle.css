@@ -1,0 +1,88 @@
+/* TareaDetalle Estilos de Ancho Completo */
+.tarea-detalle-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.tarea-detalle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.tarea-detalle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.tarea-detalle-titulo-input {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0f172a;
+    border: 1px solid transparent;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 4px 0;
+}
+
+.tarea-detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 24px;
+    width: 100%;
+}
+
+.tarea-detalle-col-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarea-detalle-fechas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.tarea-detalle-col-derecha {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tarea-detalle-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+    color: #1e293b;
+    outline: none;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.tarea-detalle-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+}
